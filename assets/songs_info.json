@@ -2,24 +2,24 @@
     {
         "name": "Moonlike Smile",
         "singer": "Genshin Impact",
-        "beatmap": "moonlike_smile.json",
-        "song": "Moonlike Smile - Genshin Impact.mp3",
+        "beatmap": "Moonlike_Smile_Genshin_Impact.json",
+        "song": "Moonlike_Smile_Genshin_Impact.mp3",
         "thumbnail": null,
         "description":null
     },
     {
         "name": "On & On (feat. Daniel Levi)",
         "singer": "Cartoon, Jéja",
-        "beatmap": "moonlike_smile.json",
-        "song": "Cartoon, Jéja - On & On (feat. Daniel Levi).mp3",
+        "beatmap": "default.json",
+        "song": "Cartoon_Jéja_On_On_feat_Daniel_Levi.mp3",
         "thumbnail": null,
         "description":null
     },
     {
         "name": "Nostalgia",
         "singer": "Janji & Johnning",
-        "beatmap": "moonlike_smile.json",
-        "song": "Janji & Johnning - Nostalgia.mp3",
+        "beatmap": "default.json",
+        "song": "Janji_Johnning_Nostalgia.mp3",
         "thumbnail": null,
         "description":null
     }

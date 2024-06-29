@@ -43,6 +43,15 @@ class PauseOverlayScreen extends StatelessWidget {
                 iconSize: 120,
                 color: Colors.white,
               ),
+              if (game.isEditing) ...[
+                const SizedBox(width: 20),
+                IconButton(
+                  onPressed: game.exportBeatmap,
+                  icon: const Icon(Icons.download),
+                  iconSize: 120,
+                  color: Colors.white,
+                ),
+              ],
               const SizedBox(width: 20),
               IconButton(
                 onPressed: game.endGame,

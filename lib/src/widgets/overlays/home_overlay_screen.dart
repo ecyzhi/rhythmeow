@@ -30,6 +30,8 @@ class HomeOverlayScreen extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 menuButton(context, Icons.play_arrow, 'PLAY', game.selectSong),
+                menuButton(context, Icons.draw, 'EDITOR',
+                    () => game.selectSong(edit: true)),
                 // menuButton(context, Icons.settings, 'SETTINGS', () {}),
                 // menuButton(context, Icons.emoji_people, 'CREDIT', () {}),
               ],

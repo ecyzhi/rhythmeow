@@ -23,6 +23,21 @@ class PlayingOverlayScreen extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          SizedBox(
+            height: 10,
+            child: ValueListenableBuilder<int>(
+                valueListenable: game.totalDuration,
+                builder: (context, totalDuration, child) {
+                  if (totalDuration == 0) return const SizedBox.shrink();
+
+                  return ValueListenableBuilder<int>(
+                      valueListenable: game.currentDuration,
+                      builder: (context, currentDuration, child) {
+                        return LinearProgressIndicator(
+                            value: currentDuration / totalDuration);
+                      });
+                }),
+          ),
           Align(
             alignment: Alignment.centerRight,
             child: Column(

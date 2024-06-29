@@ -19,16 +19,18 @@ class Note extends RectangleComponent
   Note(
     this.noteInput, {
     this.seqNo = 0,
+    this.isEditing = false,
   }) : super(
           paint: Paint()..color = noteColor[noteInput.index],
           children: [RectangleHitbox()],
           position: Vector2(
               (noteWidth * noteInput.index) + (noteGap * (noteInput.index + 1)),
-              0),
+              isEditing ? gameHeight - perfectZoneHeight : 0),
         );
 
   final NoteInput noteInput;
   final double seqNo;
+  final bool isEditing;
   bool inZone = false;
   Zone zone = Zone.miss;
 
@@ -41,13 +43,21 @@ class Note extends RectangleComponent
   @override
   void update(double dt) {
     super.update(dt);
-    position.y += noteSpeed * dt;
+    if (isEditing) {
+      position.y -= noteSpeed * dt;
 
-    if (position.y >= gameHeight) {
-      removeFromParent();
-      game.hitFeedback.value = 'Miss';
-      game.combo.value = 0;
-      game.hitFeedbackTimer.reset();
+      if (position.y < -noteHeight) {
+        removeFromParent();
+      }
+    } else {
+      position.y += noteSpeed * dt;
+
+      if (position.y >= gameHeight) {
+        removeFromParent();
+        game.hitFeedback.value = 'Miss';
+        game.combo.value = 0;
+        game.hitFeedbackTimer.reset();
+      }
     }
   }
 

@@ -10,6 +10,7 @@ import 'package:rhythmeow/src/components/components.dart';
 import 'package:rhythmeow/src/config.dart';
 import 'package:collection/collection.dart';
 import 'package:rhythmeow/src/constants/timer_constant.dart';
+import 'package:rhythmeow/src/models/beat.dart';
 import 'package:rhythmeow/src/models/beatmap.dart';
 import 'package:rhythmeow/src/models/song_info.dart';
 import 'package:rhythmeow/src/utils/file_util.dart';
@@ -42,6 +43,8 @@ class Rhythm extends FlameGame
   final ValueNotifier<int> combo = ValueNotifier(0);
   final ValueNotifier<String> hitFeedback = ValueNotifier('');
   final ValueNotifier<int> milliTime = ValueNotifier(0);
+  final ValueNotifier<int> totalDuration = ValueNotifier(0);
+  final ValueNotifier<int> currentDuration = ValueNotifier(0);
   double get width => size.x;
   double get height => size.y;
 
@@ -79,6 +82,8 @@ class Rhythm extends FlameGame
   Beatmap beatmap = Beatmap();
   AudioPlayer? audioPlayer;
 
+  bool isEditing = false;
+
   Timer hitFeedbackTimer =
       Timer(TimerConstant.hitFeedbackTimerInSecond, repeat: true);
   Timer interval = Timer(TimerConstant.intervalInSecond, repeat: true);
@@ -96,30 +101,6 @@ class Rhythm extends FlameGame
 
     playState = PlayState.welcome;
 
-    hitFeedbackTimer.stop();
-    interval.stop();
-    startTimer.stop();
-
-    hitFeedbackTimer.onTick = () => hitFeedback.value = '';
-
-    interval.onTick = () {
-      milliTime.value += 10;
-      if ((beatmap.beats?.isNotEmpty ?? false) &&
-          beatmap.beats?.first.input != null &&
-          ((beatmap.beats?.first.timeframe ?? 0) +
-                  TimerConstant.delayNoteTimerInMillisecond) ==
-              milliTime.value) {
-        world.add(Note(NoteInput.values[beatmap.beats!.first.input!]));
-        beatmap.beats?.removeAt(0);
-      }
-    };
-
-    startTimer.onTick = () async {
-      audioPlayer?.dispose();
-      audioPlayer = await FlameAudio.playLongAudio(songInfo!.song!);
-      audioPlayer?.onPlayerComplete.listen((data) => pauseGame());
-    };
-
     songInfoList = await FileUtil.readSongInfoList();
   }
 
@@ -128,6 +109,45 @@ class Rhythm extends FlameGame
     WidgetsBinding.instance.removeObserver(this);
     audioPlayer?.dispose();
     super.onDispose();
+  }
+
+  void initTimer() {
+    hitFeedbackTimer.stop();
+    interval.stop();
+    startTimer.stop();
+
+    if (isEditing) {
+      hitFeedbackTimer.onTick = () {};
+
+      interval.onTick = () {
+        milliTime.value += 10;
+      };
+    } else {
+      hitFeedbackTimer.onTick = () => hitFeedback.value = '';
+
+      interval.onTick = () {
+        milliTime.value += 10;
+        if ((beatmap.beats?.isNotEmpty ?? false) &&
+            beatmap.beats?.first.input != null &&
+            ((beatmap.beats?.first.timeframe ?? 0) +
+                    TimerConstant.delayNoteTimerInMillisecond) ==
+                milliTime.value) {
+          world.add(Note(NoteInput.values[beatmap.beats!.first.input!]));
+          beatmap.beats?.removeAt(0);
+        }
+      };
+    }
+
+    startTimer.onTick = () async {
+      audioPlayer?.dispose();
+      audioPlayer = await FlameAudio.playLongAudio(songInfo!.song!);
+      audioPlayer?.onPlayerComplete.listen((data) => pauseGame());
+
+      totalDuration.value =
+          (await audioPlayer?.getDuration())?.inMilliseconds ?? 0;
+      audioPlayer?.onPositionChanged
+          .listen((data) => currentDuration.value = data.inMilliseconds);
+    };
   }
 
   void startGame() async {
@@ -143,7 +163,9 @@ class Rhythm extends FlameGame
     playState = PlayState.playing;
 
     // read beatmap
-    beatmap = await FileUtil.readBeatmap(songInfo!.beatmap!);
+    if (!isEditing) {
+      beatmap = await FileUtil.readBeatmap(songInfo!.beatmap!);
+    }
 
     hitFeedbackTimer.start();
     interval.start();
@@ -182,6 +204,10 @@ class Rhythm extends FlameGame
     combo.value = 0;
 
     milliTime.value = 0;
+    totalDuration.value = 0;
+    currentDuration.value = 0;
+
+    beatmap = Beatmap();
 
     playState = PlayState.selectSong;
   }
@@ -196,12 +222,22 @@ class Rhythm extends FlameGame
     startGame();
   }
 
-  void selectSong() {
+  void selectSong({bool edit = false}) {
+    isEditing = edit;
+    initTimer();
+
     playState = PlayState.selectSong;
   }
 
   void backToHome() {
     playState = PlayState.welcome;
+  }
+
+  void exportBeatmap() async {
+    await FileUtil.saveBeatmap(
+      filename: songInfo?.song ?? 'rhythmeow',
+      beatmap: beatmap,
+    );
   }
 
   @override
@@ -216,30 +252,55 @@ class Rhythm extends FlameGame
   KeyEventResult onKeyEvent(
       KeyEvent event, Set<LogicalKeyboardKey> keysPressed) {
     super.onKeyEvent(event, keysPressed);
-    if (event is KeyDownEvent && playState == PlayState.playing) {
-      switch (event.logicalKey) {
-        case LogicalKeyboardKey.keyA:
-          world.children
-              .query<Note>()
-              .firstWhereOrNull((e) => e.inZone && e.noteInput == NoteInput.A)
-              ?.hit();
-        case LogicalKeyboardKey.keyS:
-          world.children
-              .query<Note>()
-              .firstWhereOrNull((e) => e.inZone && e.noteInput == NoteInput.S)
-              ?.hit();
-        case LogicalKeyboardKey.keyK:
-          world.children
-              .query<Note>()
-              .firstWhereOrNull((e) => e.inZone && e.noteInput == NoteInput.K)
-              ?.hit();
-        case LogicalKeyboardKey.keyL:
-          world.children
-              .query<Note>()
-              .firstWhereOrNull((e) => e.inZone && e.noteInput == NoteInput.L)
-              ?.hit();
-        case LogicalKeyboardKey.escape:
-          pauseGame();
+    if (isEditing) {
+      if (event is KeyDownEvent && playState == PlayState.playing) {
+        switch (event.logicalKey) {
+          case LogicalKeyboardKey.keyA:
+            world.add(Note(NoteInput.A, isEditing: true));
+            beatmap.beats?.add(Beat(
+                timeframe: milliTime.value, input: 0, type: BeatType.hit.name));
+          case LogicalKeyboardKey.keyS:
+            world.add(Note(NoteInput.S, isEditing: true));
+            beatmap.beats?.add(Beat(
+                timeframe: milliTime.value, input: 1, type: BeatType.hit.name));
+          case LogicalKeyboardKey.keyK:
+            world.add(Note(NoteInput.K, isEditing: true));
+            beatmap.beats?.add(Beat(
+                timeframe: milliTime.value, input: 2, type: BeatType.hit.name));
+          case LogicalKeyboardKey.keyL:
+            world.add(Note(NoteInput.L, isEditing: true));
+            beatmap.beats?.add(Beat(
+                timeframe: milliTime.value, input: 3, type: BeatType.hit.name));
+          case LogicalKeyboardKey.escape:
+            pauseGame();
+        }
+      }
+    } else {
+      if (event is KeyDownEvent && playState == PlayState.playing) {
+        switch (event.logicalKey) {
+          case LogicalKeyboardKey.keyA:
+            world.children
+                .query<Note>()
+                .firstWhereOrNull((e) => e.inZone && e.noteInput == NoteInput.A)
+                ?.hit();
+          case LogicalKeyboardKey.keyS:
+            world.children
+                .query<Note>()
+                .firstWhereOrNull((e) => e.inZone && e.noteInput == NoteInput.S)
+                ?.hit();
+          case LogicalKeyboardKey.keyK:
+            world.children
+                .query<Note>()
+                .firstWhereOrNull((e) => e.inZone && e.noteInput == NoteInput.K)
+                ?.hit();
+          case LogicalKeyboardKey.keyL:
+            world.children
+                .query<Note>()
+                .firstWhereOrNull((e) => e.inZone && e.noteInput == NoteInput.L)
+                ?.hit();
+          case LogicalKeyboardKey.escape:
+            pauseGame();
+        }
       }
     }
     return KeyEventResult.handled;

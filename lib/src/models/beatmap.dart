@@ -1,11 +1,13 @@
 import 'package:rhythmeow/src/models/beat.dart';
 
 class Beatmap {
-  final List<Beat>? beats;
+  List<Beat>? beats;
 
   Beatmap({
-    this.beats,
-  });
+    beats,
+  }) {
+    this.beats = beats ?? [];
+  }
 
   factory Beatmap.fromJson(List<dynamic> json) => Beatmap(
         beats: List<Beat>.from(json.map((e) => Beat.fromJson(e))),

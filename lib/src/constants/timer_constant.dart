@@ -9,5 +9,6 @@ class TimerConstant {
   /// If noteSpeed changed, this will need to be changed as well.
   /// When noteSpeed = 700, without delay note reaching perfect zone approx. = 2080
   /// 3000 - 2080 = 920ms
-  static const delayNoteTimerInMillisecond = 920;
+  // static const delayNoteTimerInMillisecond = 920;
+  static const delayNoteTimerInMillisecond = -2080;
 }
