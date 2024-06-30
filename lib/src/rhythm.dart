@@ -53,7 +53,6 @@ class Rhythm extends FlameGame
     _playState = playState;
     switch (playState) {
       case PlayState.welcome:
-      case PlayState.gameOver:
         overlays.remove(PlayState.selectSong.name);
         overlays.remove(PlayState.playing.name);
         overlays.remove(PlayState.paused.name);
@@ -69,6 +68,9 @@ class Rhythm extends FlameGame
         overlays.add(playState.name);
       case PlayState.selectSong:
         overlays.remove(PlayState.welcome.name);
+        overlays.remove(PlayState.playing.name);
+        overlays.add(playState.name);
+      case PlayState.gameOver:
         overlays.remove(PlayState.playing.name);
         overlays.add(playState.name);
       case PlayState.settings:
@@ -142,7 +144,7 @@ class Rhythm extends FlameGame
     startTimer.onTick = () async {
       audioPlayer?.dispose();
       audioPlayer = await FlameAudio.playLongAudio(songInfo!.song!);
-      audioPlayer?.onPlayerComplete.listen((data) => pauseGame());
+      audioPlayer?.onPlayerComplete.listen((data) => gameOver());
 
       totalDuration.value =
           (await audioPlayer?.getDuration())?.inMilliseconds ?? 0;
@@ -232,6 +234,10 @@ class Rhythm extends FlameGame
 
   void backToHome() {
     playState = PlayState.welcome;
+  }
+
+  void gameOver() {
+    playState = PlayState.gameOver;
   }
 
   void exportBeatmap() async {

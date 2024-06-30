@@ -68,6 +68,8 @@ class _GameAppState extends State<GameApp> {
                                   PauseOverlayScreen(game: game),
                               PlayState.selectSong.name: (context, _) =>
                                   SelectSongOverlayScreen(game: game),
+                              PlayState.gameOver.name: (context, _) =>
+                                  GameOverOverlayScreen(game: game),
                             },
                           ),
                         ),
