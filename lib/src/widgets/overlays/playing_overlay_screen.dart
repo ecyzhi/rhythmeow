@@ -50,15 +50,16 @@ class PlayingOverlayScreen extends StatelessWidget {
                   iconSize: 60,
                   color: bodyColor,
                 ),
-                ValueListenableBuilder<int>(
-                    valueListenable: game.score,
-                    builder: (context, score, child) {
-                      return Text(
-                        'Score\n$score',
-                        style: Theme.of(context).textTheme.headlineLarge,
-                        textAlign: TextAlign.right,
-                      );
-                    }),
+                ListenableBuilder(
+                  listenable: game.hitFeedback,
+                  builder: (context, child) {
+                    return Text(
+                      'Score\n${game.hitFeedback.score}',
+                      style: Theme.of(context).textTheme.headlineLarge,
+                      textAlign: TextAlign.right,
+                    );
+                  },
+                ),
               ],
             ),
           ),
@@ -67,42 +68,45 @@ class PlayingOverlayScreen extends StatelessWidget {
                 child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                ValueListenableBuilder<String>(
-                    valueListenable: game.hitFeedback,
-                    builder: (context, hitFeedback, child) {
-                      hitFeedbackController?.reset();
-                      hitFeedbackController?.forward();
+                ListenableBuilder(
+                  listenable: game.hitFeedback,
+                  builder: (context, child) {
+                    hitFeedbackController?.reset();
+                    hitFeedbackController?.forward();
 
-                      return Text(
-                        hitFeedback,
-                        style: Theme.of(context).textTheme.headlineLarge,
-                      )
-                          .animate(
-                            onInit: (controller) =>
-                                hitFeedbackController = controller,
-                          )
-                          .slideY(duration: 100.ms, begin: -0.5, end: 0)
-                          .then()
-                          .fade(delay: 300.ms, duration: 100.ms, end: 0);
-                    }),
-                ValueListenableBuilder<int>(
-                    valueListenable: game.combo,
-                    builder: (context, combo, child) {
-                      comboController?.reset();
-                      comboController?.forward();
+                    return Text(
+                      game.hitFeedback.display,
+                      style: Theme.of(context).textTheme.headlineLarge,
+                    )
+                        .animate(
+                          onInit: (controller) =>
+                              hitFeedbackController = controller,
+                        )
+                        .slideY(duration: 100.ms, begin: -0.5, end: 0)
+                        .then()
+                        .fade(delay: 300.ms, duration: 100.ms, end: 0);
+                  },
+                ),
+                ListenableBuilder(
+                  listenable: game.hitFeedback,
+                  builder: (context, child) {
+                    comboController?.reset();
+                    comboController?.forward();
 
-                      return Text(
-                        combo == 0 ? '' : combo.toString(),
-                        style: Theme.of(context).textTheme.headlineMedium,
-                      )
-                          .animate(
-                            onPlay: (controller) =>
-                                comboController = controller,
-                          )
-                          .scaleXY(duration: 100.ms, begin: 0.8)
-                          .then()
-                          .fade(delay: 700.ms, duration: 500.ms, end: 0);
-                    }),
+                    return Text(
+                      game.hitFeedback.combo == 0
+                          ? ''
+                          : game.hitFeedback.combo.toString(),
+                      style: Theme.of(context).textTheme.headlineMedium,
+                    )
+                        .animate(
+                          onPlay: (controller) => comboController = controller,
+                        )
+                        .scaleXY(duration: 100.ms, begin: 0.8)
+                        .then()
+                        .fade(delay: 700.ms, duration: 500.ms, end: 0);
+                  },
+                ),
               ],
             )),
           ),

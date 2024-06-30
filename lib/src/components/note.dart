@@ -54,8 +54,8 @@ class Note extends RectangleComponent
 
       if (position.y >= gameHeight) {
         removeFromParent();
-        game.hitFeedback.value = 'Miss';
-        game.combo.value = 0;
+        game.hitFeedback.display = 'Miss';
+        game.hitFeedback.combo = 0;
         game.hitFeedbackTimer.reset();
       }
     }
@@ -75,15 +75,15 @@ class Note extends RectangleComponent
 
   void hit() {
     if (zone == Zone.cool) {
-      game.score.value += 1;
-      game.hitFeedback.value = 'Cool';
+      game.hitFeedback.score += 1;
+      game.hitFeedback.display = 'Cool';
     } else if (zone == Zone.perfect) {
-      game.score.value += 2;
-      game.hitFeedback.value = 'Perfect';
+      game.hitFeedback.score += 2;
+      game.hitFeedback.display = 'Perfect';
     }
-    game.combo.value++;
+    game.hitFeedback.combo++;
     game.hitFeedbackTimer.reset();
-    FlameAudio.play(AudioEffect.hit);
+    FlameAudio.play(AudioEffect.hit, volume: 0.2);
     add(RemoveEffect());
   }
 }

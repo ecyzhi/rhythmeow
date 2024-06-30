@@ -12,6 +12,7 @@ import 'package:collection/collection.dart';
 import 'package:rhythmeow/src/constants/timer_constant.dart';
 import 'package:rhythmeow/src/models/beat.dart';
 import 'package:rhythmeow/src/models/beatmap.dart';
+import 'package:rhythmeow/src/models/hit_feedback.dart';
 import 'package:rhythmeow/src/models/song_info.dart';
 import 'package:rhythmeow/src/utils/file_util.dart';
 
@@ -39,9 +40,7 @@ class Rhythm extends FlameGame
           ),
         );
 
-  final ValueNotifier<int> score = ValueNotifier(0);
-  final ValueNotifier<int> combo = ValueNotifier(0);
-  final ValueNotifier<String> hitFeedback = ValueNotifier('');
+  final HitFeedback hitFeedback = HitFeedback();
   final ValueNotifier<int> milliTime = ValueNotifier(0);
   final ValueNotifier<int> totalDuration = ValueNotifier(0);
   final ValueNotifier<int> currentDuration = ValueNotifier(0);
@@ -123,7 +122,9 @@ class Rhythm extends FlameGame
         milliTime.value += 10;
       };
     } else {
-      hitFeedbackTimer.onTick = () => hitFeedback.value = '';
+      hitFeedbackTimer.onTick = () {
+        if (hitFeedback.display != '') hitFeedback.display = '';
+      };
 
       interval.onTick = () {
         milliTime.value += 10;
@@ -158,8 +159,8 @@ class Rhythm extends FlameGame
     // Reset
     world.removeAll(world.children.query<Note>());
 
-    score.value = 0;
-    combo.value = 0;
+    hitFeedback.score = 0;
+    hitFeedback.combo = 0;
     playState = PlayState.playing;
 
     // read beatmap
@@ -200,8 +201,8 @@ class Rhythm extends FlameGame
     hitFeedbackTimer.stop();
     interval.stop();
     startTimer.stop();
-    score.value = 0;
-    combo.value = 0;
+    hitFeedback.score = 0;
+    hitFeedback.combo = 0;
 
     milliTime.value = 0;
     totalDuration.value = 0;
