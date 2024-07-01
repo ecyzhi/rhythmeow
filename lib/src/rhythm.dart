@@ -200,6 +200,7 @@ class Rhythm extends FlameGame
     resumeEngine();
 
     audioPlayer?.stop();
+    FlameAudio.audioCache.clearAll();
 
     world.removeAll(world.children.query<Note>());
 
