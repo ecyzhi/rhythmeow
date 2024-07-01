@@ -14,6 +14,7 @@ import 'package:rhythmeow/src/models/beat.dart';
 import 'package:rhythmeow/src/models/beatmap.dart';
 import 'package:rhythmeow/src/models/hit_feedback.dart';
 import 'package:rhythmeow/src/models/song_info.dart';
+import 'package:rhythmeow/src/models/tapped_input.dart';
 import 'package:rhythmeow/src/utils/file_util.dart';
 
 enum PlayState {
@@ -41,6 +42,7 @@ class Rhythm extends FlameGame
         );
 
   final HitFeedback hitFeedback = HitFeedback();
+  final TappedInput tappedInput = TappedInput();
   final ValueNotifier<int> milliTime = ValueNotifier(0);
   final ValueNotifier<int> totalDuration = ValueNotifier(0);
   final ValueNotifier<int> currentDuration = ValueNotifier(0);
@@ -263,16 +265,17 @@ class Rhythm extends FlameGame
   KeyEventResult onKeyEvent(
       KeyEvent event, Set<LogicalKeyboardKey> keysPressed) {
     super.onKeyEvent(event, keysPressed);
-    if (event is KeyDownEvent && playState == PlayState.playing) {
+    if (playState == PlayState.playing) {
       switch (event.logicalKey) {
         case LogicalKeyboardKey.keyA:
-          handleInput(NoteInput.A);
         case LogicalKeyboardKey.keyS:
-          handleInput(NoteInput.S);
         case LogicalKeyboardKey.keyK:
-          handleInput(NoteInput.K);
         case LogicalKeyboardKey.keyL:
-          handleInput(NoteInput.L);
+          if (event is KeyDownEvent) {
+            handleInput(NoteInput.values.byName(event.logicalKey.keyLabel));
+          } else if (event is KeyUpEvent) {
+            handleInputEnd(NoteInput.values.byName(event.logicalKey.keyLabel));
+          }
         case LogicalKeyboardKey.escape:
           pauseGame();
       }
@@ -281,6 +284,8 @@ class Rhythm extends FlameGame
   }
 
   handleInput(NoteInput input) {
+    tappedInput.add(input);
+
     if (isEditing) {
       world.add(Note(input, isEditing: true));
       beatmap.beats?.add(Beat(
@@ -294,6 +299,10 @@ class Rhythm extends FlameGame
           .firstWhereOrNull((e) => e.inZone && e.noteInput == input)
           ?.hit();
     }
+  }
+
+  handleInputEnd(NoteInput input) {
+    tappedInput.remove(input);
   }
 
   @override

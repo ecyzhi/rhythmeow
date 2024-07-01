@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:rhythmeow/src/components/components.dart';
 import 'package:rhythmeow/src/config.dart';
 import 'package:rhythmeow/src/rhythm.dart';
+import 'package:rhythmeow/src/widgets/touchpad.dart';
 
 class PlayingOverlayScreen extends StatelessWidget {
   const PlayingOverlayScreen({
@@ -18,7 +18,7 @@ class PlayingOverlayScreen extends StatelessWidget {
     AnimationController? comboController;
 
     return Container(
-      alignment: const Alignment(0, -0.15),
+      alignment: const Alignment(0, 0),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -39,48 +39,43 @@ class PlayingOverlayScreen extends StatelessWidget {
                       });
                 }),
           ),
-          Container(
-            margin: const EdgeInsets.only(right: 16),
-            alignment: Alignment.centerRight,
-            child: ValueListenableBuilder<int>(
-                valueListenable: game.milliTime,
-                builder: (context, milliTime, child) {
-                  DateTime time =
-                      DateTime.fromMillisecondsSinceEpoch(milliTime).toUtc();
-                  String timestamp =
-                      '${time.minute.toString().padLeft(2, '0')}:${time.second.toString().padLeft(2, '0')}.${time.millisecond}';
-
-                  return Text(
-                    timestamp,
-                    style: Theme.of(context).textTheme.bodyLarge,
-                    textAlign: TextAlign.right,
-                  );
-                }),
-          ),
-          const SizedBox(height: 20),
-          Container(
-            margin: const EdgeInsets.only(right: 16),
-            alignment: Alignment.centerRight,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.end,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                ValueListenableBuilder<int>(
+                  valueListenable: game.milliTime,
+                  builder: (context, milliTime, child) {
+                    DateTime time =
+                        DateTime.fromMillisecondsSinceEpoch(milliTime).toUtc();
+                    String timestamp =
+                        '${time.minute.toString().padLeft(2, '0')}:${time.second.toString().padLeft(2, '0')}.${time.millisecond}';
+
+                    return Text(
+                      timestamp,
+                      style: Theme.of(context).textTheme.bodyLarge,
+                      textAlign: TextAlign.right,
+                    );
+                  },
+                ),
+                Center(
+                  child: ListenableBuilder(
+                    listenable: game.hitFeedback,
+                    builder: (context, child) {
+                      return Text(
+                        game.hitFeedback.score.toString(),
+                        style: Theme.of(context).textTheme.headlineLarge,
+                        textAlign: TextAlign.right,
+                      );
+                    },
+                  ),
+                ),
                 IconButton(
                   onPressed: game.pauseGame,
                   icon: const Icon(Icons.pause),
                   iconSize: 60,
                   color: bodyColor,
-                ),
-                const SizedBox(height: 20),
-                ListenableBuilder(
-                  listenable: game.hitFeedback,
-                  builder: (context, child) {
-                    return Text(
-                      'Score\n${game.hitFeedback.score}',
-                      style: Theme.of(context).textTheme.headlineLarge,
-                      textAlign: TextAlign.right,
-                    );
-                  },
                 ),
               ],
             ),
@@ -88,15 +83,7 @@ class PlayingOverlayScreen extends StatelessWidget {
           Expanded(
             child: Stack(
               children: [
-                Container(
-                  margin: const EdgeInsets.only(left: noteGap * 0.5),
-                  width: (noteWidth * 4) + (noteGap * 4),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children:
-                        NoteInput.values.map((e) => buildTouchpad(e)).toList(),
-                  ),
-                ),
+                Touchpad(game: game),
                 Center(
                     child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -147,17 +134,6 @@ class PlayingOverlayScreen extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-
-  Expanded buildTouchpad(NoteInput input) {
-    return Expanded(
-      child: InkWell(
-        onTap: () => game.handleInput(input),
-        child: Container(
-          decoration: BoxDecoration(border: Border.all()),
-        ),
       ),
     );
   }

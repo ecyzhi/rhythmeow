@@ -14,7 +14,7 @@ class SelectSongOverlayScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: playAreaColor,
-      alignment: const Alignment(0, -0.15),
+      alignment: const Alignment(0, 0),
       padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 20),
       child: Column(
         mainAxisSize: MainAxisSize.min,

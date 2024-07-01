@@ -14,7 +14,7 @@ class HomeOverlayScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: playAreaColor,
-      alignment: const Alignment(0, -0.15),
+      alignment: const Alignment(0, 0),
       padding: const EdgeInsets.all(16),
       child: SizedBox(
         width: 500,

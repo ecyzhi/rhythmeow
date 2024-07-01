@@ -13,7 +13,7 @@ class GameOverOverlayScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      alignment: const Alignment(0, -0.15),
+      alignment: const Alignment(0, 0),
       padding: const EdgeInsets.all(16),
       color: Colors.black45,
       child: Column(
