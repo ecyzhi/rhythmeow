@@ -170,6 +170,9 @@ class Rhythm extends FlameGame
       beatmap = await FileUtil.readBeatmap(songInfo!.beatmap!);
     }
 
+    // Preload song into cache
+    await FlameAudio.audioCache.load(songInfo!.song!);
+
     hitFeedbackTimer.start();
     interval.start();
     startTimer.start();
