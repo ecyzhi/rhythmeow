@@ -259,58 +259,37 @@ class Rhythm extends FlameGame
   KeyEventResult onKeyEvent(
       KeyEvent event, Set<LogicalKeyboardKey> keysPressed) {
     super.onKeyEvent(event, keysPressed);
-    if (isEditing) {
-      if (event is KeyDownEvent && playState == PlayState.playing) {
-        switch (event.logicalKey) {
-          case LogicalKeyboardKey.keyA:
-            world.add(Note(NoteInput.A, isEditing: true));
-            beatmap.beats?.add(Beat(
-                timeframe: milliTime.value, input: 0, type: BeatType.hit.name));
-          case LogicalKeyboardKey.keyS:
-            world.add(Note(NoteInput.S, isEditing: true));
-            beatmap.beats?.add(Beat(
-                timeframe: milliTime.value, input: 1, type: BeatType.hit.name));
-          case LogicalKeyboardKey.keyK:
-            world.add(Note(NoteInput.K, isEditing: true));
-            beatmap.beats?.add(Beat(
-                timeframe: milliTime.value, input: 2, type: BeatType.hit.name));
-          case LogicalKeyboardKey.keyL:
-            world.add(Note(NoteInput.L, isEditing: true));
-            beatmap.beats?.add(Beat(
-                timeframe: milliTime.value, input: 3, type: BeatType.hit.name));
-          case LogicalKeyboardKey.escape:
-            pauseGame();
-        }
-      }
-    } else {
-      if (event is KeyDownEvent && playState == PlayState.playing) {
-        switch (event.logicalKey) {
-          case LogicalKeyboardKey.keyA:
-            world.children
-                .query<Note>()
-                .firstWhereOrNull((e) => e.inZone && e.noteInput == NoteInput.A)
-                ?.hit();
-          case LogicalKeyboardKey.keyS:
-            world.children
-                .query<Note>()
-                .firstWhereOrNull((e) => e.inZone && e.noteInput == NoteInput.S)
-                ?.hit();
-          case LogicalKeyboardKey.keyK:
-            world.children
-                .query<Note>()
-                .firstWhereOrNull((e) => e.inZone && e.noteInput == NoteInput.K)
-                ?.hit();
-          case LogicalKeyboardKey.keyL:
-            world.children
-                .query<Note>()
-                .firstWhereOrNull((e) => e.inZone && e.noteInput == NoteInput.L)
-                ?.hit();
-          case LogicalKeyboardKey.escape:
-            pauseGame();
-        }
+    if (event is KeyDownEvent && playState == PlayState.playing) {
+      switch (event.logicalKey) {
+        case LogicalKeyboardKey.keyA:
+          handleInput(NoteInput.A);
+        case LogicalKeyboardKey.keyS:
+          handleInput(NoteInput.S);
+        case LogicalKeyboardKey.keyK:
+          handleInput(NoteInput.K);
+        case LogicalKeyboardKey.keyL:
+          handleInput(NoteInput.L);
+        case LogicalKeyboardKey.escape:
+          pauseGame();
       }
     }
     return KeyEventResult.handled;
+  }
+
+  handleInput(NoteInput input) {
+    if (isEditing) {
+      world.add(Note(input, isEditing: true));
+      beatmap.beats?.add(Beat(
+        timeframe: milliTime.value,
+        input: NoteInput.values.indexOf(input),
+        type: BeatType.hit.name,
+      ));
+    } else {
+      world.children
+          .query<Note>()
+          .firstWhereOrNull((e) => e.inZone && e.noteInput == input)
+          ?.hit();
+    }
   }
 
   @override

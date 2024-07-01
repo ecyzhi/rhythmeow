@@ -27,7 +27,7 @@ class _GameAppState extends State<GameApp> {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
-        textTheme: GoogleFonts.pressStart2pTextTheme().apply(
+        textTheme: GoogleFonts.yatraOneTextTheme().apply(
           bodyColor: bodyColor,
           displayColor: displayColor,
         ),
