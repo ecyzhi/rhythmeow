@@ -23,7 +23,7 @@ class PauseOverlayScreen extends StatelessWidget {
             'Paused',
             style: Theme.of(context)
                 .textTheme
-                .displayLarge
+                .displayMedium
                 ?.copyWith(color: Colors.white),
           ).animate().slideY(duration: 200.ms, begin: -1, end: 0),
           const SizedBox(height: 20),
@@ -33,14 +33,14 @@ class PauseOverlayScreen extends StatelessWidget {
               IconButton(
                 onPressed: game.resumeGame,
                 icon: const Icon(Icons.play_arrow),
-                iconSize: 120,
+                iconSize: 50,
                 color: Colors.white,
               ),
               const SizedBox(width: 20),
               IconButton(
                 onPressed: game.restartGame,
                 icon: const Icon(Icons.replay),
-                iconSize: 120,
+                iconSize: 50,
                 color: Colors.white,
               ),
               if (game.isEditing) ...[
@@ -48,7 +48,7 @@ class PauseOverlayScreen extends StatelessWidget {
                 IconButton(
                   onPressed: game.exportBeatmap,
                   icon: const Icon(Icons.download),
-                  iconSize: 120,
+                  iconSize: 50,
                   color: Colors.white,
                 ),
               ],
@@ -56,7 +56,7 @@ class PauseOverlayScreen extends StatelessWidget {
               IconButton(
                 onPressed: game.endGame,
                 icon: const Icon(Icons.exit_to_app),
-                iconSize: 120,
+                iconSize: 50,
                 color: Colors.white,
               ),
             ],

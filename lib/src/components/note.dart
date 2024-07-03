@@ -76,7 +76,6 @@ class Note extends RectangleComponent
       zone = Zone.cool;
     } else if (other is PerfectZone) {
       zone = Zone.perfect;
-      print('height=>${game.height} | time=>${game.milliTime.value}');
     }
   }
 

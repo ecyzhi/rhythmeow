@@ -12,34 +12,45 @@ class HomeOverlayScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: playAreaColor,
-      alignment: const Alignment(0, 0),
-      padding: const EdgeInsets.all(16),
-      child: SizedBox(
-        width: 500,
-        child: Column(
+    return OrientationBuilder(builder: (context, orientation) {
+      return Container(
+        color: playAreaColor,
+        alignment: const Alignment(0, 0),
+        padding: const EdgeInsets.all(20),
+        child: Flex(
+          direction: orientation == Orientation.portrait
+              ? Axis.vertical
+              : Axis.horizontal,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
-              'Rhythm',
-              style: Theme.of(context).textTheme.displayLarge,
+            Expanded(
+              child: Center(
+                child: Text(
+                  'Rhythm',
+                  style: Theme.of(context).textTheme.displayLarge,
+                ),
+              ),
             ),
-            const SizedBox(height: 250),
-            Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                menuButton(context, Icons.play_arrow, 'PLAY', game.selectSong),
-                menuButton(context, Icons.draw, 'EDITOR',
-                    () => game.selectSong(edit: true)),
-                // menuButton(context, Icons.settings, 'SETTINGS', () {}),
-                // menuButton(context, Icons.emoji_people, 'CREDIT', () {}),
-              ],
+            Expanded(
+              child: SingleChildScrollView(
+                physics: const ClampingScrollPhysics(),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    menuButton(
+                        context, Icons.play_arrow, 'PLAY', game.selectSong),
+                    menuButton(context, Icons.draw, 'EDITOR',
+                        () => game.selectSong(edit: true)),
+                    // menuButton(context, Icons.settings, 'SETTINGS', () {}),
+                    // menuButton(context, Icons.emoji_people, 'CREDIT', () {}),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
-      ),
-    );
+      );
+    });
   }
 
   Widget menuButton(
@@ -49,11 +60,11 @@ class HomeOverlayScreen extends StatelessWidget {
     void Function() onPressed,
   ) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 30),
+      padding: const EdgeInsets.only(bottom: 15),
       child: ElevatedButton(
         onPressed: onPressed,
         child: Padding(
-          padding: const EdgeInsets.all(24),
+          padding: const EdgeInsets.all(15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -63,7 +74,7 @@ class HomeOverlayScreen extends StatelessWidget {
                 title,
                 style: Theme.of(context)
                     .textTheme
-                    .displaySmall
+                    .titleLarge
                     ?.copyWith(color: bodyColor),
               ),
             ],

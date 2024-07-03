@@ -15,60 +15,62 @@ class SelectSongOverlayScreen extends StatelessWidget {
     return Container(
       color: playAreaColor,
       alignment: const Alignment(0, 0),
-      padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 20),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const SizedBox(height: 50),
           Row(
             children: [
               IconButton(
                 onPressed: game.backToHome,
                 icon: const Icon(Icons.keyboard_backspace),
-                iconSize: 60,
+                iconSize: 30,
                 color: bodyColor,
               ),
-              const SizedBox(width: 80),
+              const SizedBox(width: 20),
               Text(
                 'Select Song',
-                style: Theme.of(context).textTheme.displayMedium,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             ],
           ),
-          const SizedBox(height: 50),
           Expanded(
             child: ListView.builder(
               itemCount: game.songInfoList.length,
               itemBuilder: (context, i) => InkWell(
                 onTap: () => game.onSongPressed(game.songInfoList[i]),
                 child: Container(
-                  padding: const EdgeInsets.all(20),
-                  margin: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(15),
+                  margin: const EdgeInsets.all(10),
                   decoration: const BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                    borderRadius: BorderRadius.all(Radius.circular(15)),
                   ),
                   child: Row(
                     children: [
                       Image.asset(
                         'assets/images/thumbnails/default_thumbnail.png',
-                        width: 150,
-                        height: 150,
+                        width: 50,
+                        height: 50,
                       ),
-                      const SizedBox(width: 50),
+                      const SizedBox(width: 20),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               game.songInfoList[i].name ?? '',
-                              style: Theme.of(context).textTheme.displaySmall,
+                              style: Theme.of(context).textTheme.titleMedium,
+                              maxLines: 3,
+                              overflow: TextOverflow.ellipsis,
                             ),
                             const SizedBox(height: 8),
                             Text(
                               game.songInfoList[i].singer ?? '',
-                              style: Theme.of(context).textTheme.titleLarge,
+                              style: Theme.of(context).textTheme.bodyMedium,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
                             ),
                           ],
                         ),

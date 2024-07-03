@@ -45,7 +45,7 @@ class PlayingOverlayScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: 100,
+                  width: 70,
                   alignment: Alignment.centerLeft,
                   child: ValueListenableBuilder<int>(
                     valueListenable: game.milliTime,
@@ -58,7 +58,7 @@ class PlayingOverlayScreen extends StatelessWidget {
 
                       return Text(
                         timestamp,
-                        style: Theme.of(context).textTheme.bodyLarge,
+                        style: Theme.of(context).textTheme.bodySmall,
                         textAlign: TextAlign.right,
                       );
                     },
@@ -70,7 +70,7 @@ class PlayingOverlayScreen extends StatelessWidget {
                     builder: (context, child) {
                       return Text(
                         game.hitFeedback.score.toString(),
-                        style: Theme.of(context).textTheme.headlineLarge,
+                        style: Theme.of(context).textTheme.headlineSmall,
                         textAlign: TextAlign.right,
                       );
                     },
@@ -79,7 +79,7 @@ class PlayingOverlayScreen extends StatelessWidget {
                 IconButton(
                   onPressed: game.pauseGame,
                   icon: const Icon(Icons.pause),
-                  iconSize: 60,
+                  iconSize: 30,
                   color: bodyColor,
                 ),
               ],

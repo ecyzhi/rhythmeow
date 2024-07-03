@@ -45,10 +45,6 @@ class _GameAppState extends State<GameApp> {
             child: GameWidget(
               game: game,
               overlayBuilderMap: {
-                PlayState.gameOver.name: (context, game) => const OverlayScreen(
-                      title: 'G A M E   O V E R',
-                      subtitle: 'Tap to Play Again',
-                    ),
                 PlayState.welcome.name: (context, _) =>
                     HomeOverlayScreen(game: game),
                 PlayState.playing.name: (context, _) =>

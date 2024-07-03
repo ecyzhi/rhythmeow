@@ -23,7 +23,7 @@ class GameOverOverlayScreen extends StatelessWidget {
             game.hitFeedback.score.toString(),
             style: Theme.of(context)
                 .textTheme
-                .displayLarge
+                .displayMedium
                 ?.copyWith(color: Colors.white),
           ).animate().slideY(duration: 200.ms, begin: -1, end: 0),
           const SizedBox(height: 20),
@@ -34,7 +34,7 @@ class GameOverOverlayScreen extends StatelessWidget {
               IconButton(
                 onPressed: game.restartGame,
                 icon: const Icon(Icons.replay),
-                iconSize: 120,
+                iconSize: 50,
                 color: Colors.white,
               ),
               if (game.isEditing) ...[
@@ -42,7 +42,7 @@ class GameOverOverlayScreen extends StatelessWidget {
                 IconButton(
                   onPressed: game.exportBeatmap,
                   icon: const Icon(Icons.download),
-                  iconSize: 120,
+                  iconSize: 50,
                   color: Colors.white,
                 ),
               ],
@@ -50,7 +50,7 @@ class GameOverOverlayScreen extends StatelessWidget {
               IconButton(
                 onPressed: game.endGame,
                 icon: const Icon(Icons.exit_to_app),
-                iconSize: 120,
+                iconSize: 50,
                 color: Colors.white,
               ),
             ],
