@@ -144,8 +144,10 @@ class Rhythm extends FlameGame
     }
 
     startTimer.onTick = () async {
-      audioPlayer?.dispose();
-      audioPlayer = await FlameAudio.playLongAudio(songInfo!.song!);
+      // Temp solution: Seek to position 0:00 to restart the song
+      audioPlayer?.seek(Duration.zero);
+      audioPlayer?.setVolume(1);
+
       audioPlayer?.onPlayerComplete.listen((data) => gameOver());
 
       totalDuration.value =
@@ -172,8 +174,8 @@ class Rhythm extends FlameGame
       beatmap = await FileUtil.readBeatmap(songInfo!.beatmap!);
     }
 
-    // Preload song into cache
-    await FlameAudio.audioCache.load(songInfo!.song!);
+    // Temp solution: Play at volume 0 to load the file. Tried cache.load but still not in sync at start.
+    audioPlayer = await FlameAudio.playLongAudio(songInfo!.song!, volume: 0);
 
     hitFeedbackTimer.start();
     interval.start();
