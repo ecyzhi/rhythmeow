@@ -23,9 +23,6 @@ class Note extends RectangleComponent
   }) : super(
           paint: Paint()..color = noteColor[noteInput.index],
           children: [RectangleHitbox()],
-          position: Vector2(
-              (noteWidth * noteInput.index) + (noteGap * (noteInput.index + 1)),
-              isEditing ? gameHeight - perfectZoneHeight : 0),
         );
 
   final NoteInput noteInput;
@@ -37,6 +34,13 @@ class Note extends RectangleComponent
   @override
   FutureOr<void> onLoad() async {
     super.onLoad();
+
+    double noteWidth = (game.width - (noteGap * 4)) / 4;
+    position = Vector2(
+        (noteWidth * noteInput.index) +
+            (0.5 * noteGap) +
+            (noteInput.index * noteGap),
+        isEditing ? game.height - perfectZoneHeight : 0);
     size = Vector2(noteWidth, noteHeight);
   }
 
@@ -44,15 +48,17 @@ class Note extends RectangleComponent
   void update(double dt) {
     super.update(dt);
     if (isEditing) {
-      position.y -= noteSpeed * dt;
+      position.y -=
+          (game.height - (perfectZoneHeight / 2)) * noteSpeedMultiplier * dt;
 
       if (position.y < -noteHeight) {
         removeFromParent();
       }
     } else {
-      position.y += noteSpeed * dt;
+      position.y +=
+          (game.height - (perfectZoneHeight / 2)) * noteSpeedMultiplier * dt;
 
-      if (position.y >= gameHeight) {
+      if (position.y >= game.height) {
         removeFromParent();
         game.hitFeedback.display = 'Miss';
         game.hitFeedback.combo = 0;
@@ -70,6 +76,7 @@ class Note extends RectangleComponent
       zone = Zone.cool;
     } else if (other is PerfectZone) {
       zone = Zone.perfect;
+      print('height=>${game.height} | time=>${game.milliTime.value}');
     }
   }
 

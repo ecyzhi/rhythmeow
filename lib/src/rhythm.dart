@@ -7,7 +7,6 @@ import 'package:flame_audio/flame_audio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rhythmeow/src/components/components.dart';
-import 'package:rhythmeow/src/config.dart';
 import 'package:collection/collection.dart';
 import 'package:rhythmeow/src/constants/timer_constant.dart';
 import 'package:rhythmeow/src/models/beat.dart';
@@ -33,13 +32,7 @@ class Rhythm extends FlameGame
         KeyboardEvents,
         TapDetector,
         WidgetsBindingObserver {
-  Rhythm()
-      : super(
-          camera: CameraComponent.withFixedResolution(
-            width: gameWidth,
-            height: gameHeight,
-          ),
-        );
+  Rhythm();
 
   final HitFeedback hitFeedback = HitFeedback();
   final TappedInput tappedInput = TappedInput();
@@ -134,9 +127,7 @@ class Rhythm extends FlameGame
         milliTime.value += 10;
         if ((beatmap.beats?.isNotEmpty ?? false) &&
             beatmap.beats?.first.input != null &&
-            ((beatmap.beats?.first.timeframe ?? 0) +
-                    TimerConstant.delayNoteTimerInMillisecond) ==
-                milliTime.value) {
+            (beatmap.beats?.first.timeframe ?? 0) == milliTime.value) {
           world.add(Note(NoteInput.values[beatmap.beats!.first.input!]));
           beatmap.beats?.removeAt(0);
         }

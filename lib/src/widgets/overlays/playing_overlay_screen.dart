@@ -44,20 +44,25 @@ class PlayingOverlayScreen extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                ValueListenableBuilder<int>(
-                  valueListenable: game.milliTime,
-                  builder: (context, milliTime, child) {
-                    DateTime time =
-                        DateTime.fromMillisecondsSinceEpoch(milliTime).toUtc();
-                    String timestamp =
-                        '${time.minute.toString().padLeft(2, '0')}:${time.second.toString().padLeft(2, '0')}.${time.millisecond}';
+                Container(
+                  width: 100,
+                  alignment: Alignment.centerLeft,
+                  child: ValueListenableBuilder<int>(
+                    valueListenable: game.milliTime,
+                    builder: (context, milliTime, child) {
+                      DateTime time =
+                          DateTime.fromMillisecondsSinceEpoch(milliTime)
+                              .toUtc();
+                      String timestamp =
+                          '${time.minute.toString().padLeft(2, '0')}:${time.second.toString().padLeft(2, '0')}.${time.millisecond}';
 
-                    return Text(
-                      timestamp,
-                      style: Theme.of(context).textTheme.bodyLarge,
-                      textAlign: TextAlign.right,
-                    );
-                  },
+                      return Text(
+                        timestamp,
+                        style: Theme.of(context).textTheme.bodyLarge,
+                        textAlign: TextAlign.right,
+                      );
+                    },
+                  ),
                 ),
                 Center(
                   child: ListenableBuilder(

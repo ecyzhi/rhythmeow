@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
 
-const gameWidth = 820.0;
-const gameHeight = 1600.0;
-
 // Zone
 const perfectZoneHeight = 100.0;
 const coolZoneHeight = 200.0;
 const missZoneHeight = 200.0;
 
 // Note
-const noteWidth = 192.5;
 const noteHeight = 50.0;
 const noteGap = 10.0;
-const noteSpeed = 700.0;
 const songBuffer = 3000;
+const noteSpeedMultiplier = 1;
 
 // Color
 const Color bodyColor = Color(0xff184e77);

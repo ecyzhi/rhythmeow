@@ -1,156 +1,156 @@
 [
     {
-        "timeframe": 5000,
+        "timeframe": 4000,
         "input": 0,
         "type": "hit"
     },
     {
-        "timeframe": 5520,
+        "timeframe": 4520,
         "input": 0,
         "type": "hit"
     },
     {
-        "timeframe": 6270,
+        "timeframe": 5270,
         "input": 0,
         "type": "hit"
     },
     {
-        "timeframe": 7110,
+        "timeframe": 6110,
         "input": 1,
         "type": "hit"
     },
     {
-        "timeframe": 7790,
+        "timeframe": 6790,
         "input": 2,
         "type": "hit"
     },
     {
-        "timeframe": 8460,
+        "timeframe": 7460,
         "input": 2,
         "type": "hit"
     },
     {
-        "timeframe": 9120,
+        "timeframe": 8120,
         "input": 3,
         "type": "hit"
     },
     {
-        "timeframe": 9780,
+        "timeframe": 8780,
         "input": 2,
         "type": "hit"
     },
     {
-        "timeframe": 10040,
+        "timeframe": 9040,
         "input": 1,
         "type": "hit"
     },
     {
-        "timeframe": 10410,
+        "timeframe": 9410,
         "input": 3,
         "type": "hit"
     },
     {
-        "timeframe": 11090,
+        "timeframe": 10090,
         "input": 0,
         "type": "hit"
     },
     {
-        "timeframe": 11740,
+        "timeframe": 10740,
         "input": 2,
         "type": "hit"
     },
     {
-        "timeframe": 12370,
+        "timeframe": 11370,
         "input": 1,
         "type": "hit"
     },
     {
-        "timeframe": 13110,
+        "timeframe": 12110,
         "input": 3,
         "type": "hit"
     },
     {
-        "timeframe": 13730,
+        "timeframe": 12730,
         "input": 2,
         "type": "hit"
     },
     {
-        "timeframe": 14340,
+        "timeframe": 13340,
         "input": 1,
         "type": "hit"
     },
     {
-        "timeframe": 15020,
+        "timeframe": 14020,
         "input": 0,
         "type": "hit"
     },
     {
-        "timeframe": 15860,
+        "timeframe": 14860,
         "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 15160,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 15490,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 15820,
+        "input": 2,
         "type": "hit"
     },
     {
         "timeframe": 16160,
-        "input": 2,
-        "type": "hit"
-    },
-    {
-        "timeframe": 16490,
         "input": 1,
         "type": "hit"
     },
     {
-        "timeframe": 16820,
+        "timeframe": 16460,
         "input": 2,
         "type": "hit"
     },
     {
-        "timeframe": 17160,
-        "input": 1,
-        "type": "hit"
-    },
-    {
-        "timeframe": 17460,
-        "input": 2,
-        "type": "hit"
-    },
-    {
-        "timeframe": 17810,
+        "timeframe": 16810,
         "input": 3,
         "type": "hit"
     },
     {
-        "timeframe": 18610,
+        "timeframe": 17610,
         "input": 3,
         "type": "hit"
     },
     {
-        "timeframe": 18920,
+        "timeframe": 17920,
         "input": 0,
         "type": "hit"
     },
     {
-        "timeframe": 19250,
+        "timeframe": 18250,
         "input": 3,
         "type": "hit"
     },
     {
-        "timeframe": 19590,
+        "timeframe": 18590,
         "input": 0,
         "type": "hit"
     },
     {
-        "timeframe": 19880,
+        "timeframe": 18880,
         "input": 3,
         "type": "hit"
     },
     {
-        "timeframe": 20190,
+        "timeframe": 19190,
         "input": 0,
         "type": "hit"
     },
     {
-        "timeframe": 20550,
+        "timeframe": 19550,
         "input": 2,
         "type": "hit"
     }

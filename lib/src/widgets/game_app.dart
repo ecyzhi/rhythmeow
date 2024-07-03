@@ -42,42 +42,24 @@ class _GameAppState extends State<GameApp> {
             ),
           ),
           child: SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Center(
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: FittedBox(
-                        child: SizedBox(
-                          width: gameWidth,
-                          height: gameHeight,
-                          child: GameWidget(
-                            game: game,
-                            overlayBuilderMap: {
-                              PlayState.gameOver.name: (context, game) =>
-                                  const OverlayScreen(
-                                    title: 'G A M E   O V E R',
-                                    subtitle: 'Tap to Play Again',
-                                  ),
-                              PlayState.welcome.name: (context, _) =>
-                                  HomeOverlayScreen(game: game),
-                              PlayState.playing.name: (context, _) =>
-                                  PlayingOverlayScreen(game: game),
-                              PlayState.paused.name: (context, _) =>
-                                  PauseOverlayScreen(game: game),
-                              PlayState.selectSong.name: (context, _) =>
-                                  SelectSongOverlayScreen(game: game),
-                              PlayState.gameOver.name: (context, _) =>
-                                  GameOverOverlayScreen(game: game),
-                            },
-                          ),
-                        ),
-                      ),
+            child: GameWidget(
+              game: game,
+              overlayBuilderMap: {
+                PlayState.gameOver.name: (context, game) => const OverlayScreen(
+                      title: 'G A M E   O V E R',
+                      subtitle: 'Tap to Play Again',
                     ),
-                  ],
-                ),
-              ),
+                PlayState.welcome.name: (context, _) =>
+                    HomeOverlayScreen(game: game),
+                PlayState.playing.name: (context, _) =>
+                    PlayingOverlayScreen(game: game),
+                PlayState.paused.name: (context, _) =>
+                    PauseOverlayScreen(game: game),
+                PlayState.selectSong.name: (context, _) =>
+                    SelectSongOverlayScreen(game: game),
+                PlayState.gameOver.name: (context, _) =>
+                    GameOverOverlayScreen(game: game),
+              },
             ),
           ),
         ),
