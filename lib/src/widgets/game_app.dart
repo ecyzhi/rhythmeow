@@ -33,29 +33,25 @@ class _GameAppState extends State<GameApp> {
         ),
       ),
       home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: bgGradientColor,
-            ),
-          ),
-          child: SafeArea(
-            child: GameWidget(
-              game: game,
-              overlayBuilderMap: {
-                PlayState.welcome.name: (context, _) =>
-                    HomeOverlayScreen(game: game),
-                PlayState.playing.name: (context, _) =>
-                    PlayingOverlayScreen(game: game),
-                PlayState.paused.name: (context, _) =>
-                    PauseOverlayScreen(game: game),
-                PlayState.selectSong.name: (context, _) =>
-                    SelectSongOverlayScreen(game: game),
-                PlayState.gameOver.name: (context, _) =>
-                    GameOverOverlayScreen(game: game),
-              },
+        body: Center(
+          child: Container(
+            decoration: const BoxDecoration(color: playAreaColor),
+            child: SafeArea(
+              child: GameWidget(
+                game: game,
+                overlayBuilderMap: {
+                  PlayState.welcome.name: (context, _) =>
+                      HomeOverlayScreen(game: game),
+                  PlayState.playing.name: (context, _) =>
+                      PlayingOverlayScreen(game: game),
+                  PlayState.paused.name: (context, _) =>
+                      PauseOverlayScreen(game: game),
+                  PlayState.selectSong.name: (context, _) =>
+                      SelectSongOverlayScreen(game: game),
+                  PlayState.gameOver.name: (context, _) =>
+                      GameOverOverlayScreen(game: game),
+                },
+              ),
             ),
           ),
         ),

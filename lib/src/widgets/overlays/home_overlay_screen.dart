@@ -25,9 +25,19 @@ class HomeOverlayScreen extends StatelessWidget {
           children: [
             Expanded(
               child: Center(
-                child: Text(
-                  'Rhythm',
-                  style: Theme.of(context).textTheme.displayLarge,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Image.asset(
+                      'assets/images/home_background_small.jpg',
+                      width: 250,
+                      height: 250,
+                    ),
+                    Text(
+                      'Rhythmeow',
+                      style: Theme.of(context).textTheme.displayLarge,
+                    ),
+                  ],
                 ),
               ),
             ),

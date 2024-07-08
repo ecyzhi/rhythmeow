@@ -4,6 +4,7 @@ import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:flame/effects.dart';
 import 'package:flame_audio/flame_audio.dart';
+import 'package:flame_svg/flame_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:rhythmeow/src/components/components.dart';
 import 'package:rhythmeow/src/config.dart';
@@ -14,14 +15,13 @@ enum NoteInput { A, S, K, L }
 
 enum Zone { cool, perfect, miss }
 
-class Note extends RectangleComponent
+class Note extends SvgComponent
     with CollisionCallbacks, HasGameReference<Rhythm> {
   Note(
     this.noteInput, {
     this.seqNo = 0,
     this.isEditing = false,
   }) : super(
-          paint: Paint()..color = noteColor[noteInput.index],
           children: [RectangleHitbox()],
         );
 
@@ -35,12 +35,17 @@ class Note extends RectangleComponent
   FutureOr<void> onLoad() async {
     super.onLoad();
 
+    paint = Paint()
+      ..colorFilter =
+          ColorFilter.mode(noteColor[noteInput.index], BlendMode.srcIn);
+    svg = await Svg.load('images/svgs/paw.svg');
+
     double noteWidth = (game.width - (noteGap * 4)) / 4;
     position = Vector2(
         (noteWidth * noteInput.index) +
             (0.5 * noteGap) +
             (noteInput.index * noteGap),
-        isEditing ? game.height - perfectZoneHeight : 0);
+        isEditing ? game.height - perfectZoneHeight : -noteHeight);
     size = Vector2(noteWidth, noteHeight);
   }
 
@@ -48,15 +53,17 @@ class Note extends RectangleComponent
   void update(double dt) {
     super.update(dt);
     if (isEditing) {
-      position.y -=
-          (game.height - (perfectZoneHeight / 2)) * noteSpeedMultiplier * dt;
+      position.y -= ((game.height + noteHeight) - (perfectZoneHeight / 2)) *
+          noteSpeedMultiplier *
+          dt;
 
       if (position.y < -noteHeight) {
         removeFromParent();
       }
     } else {
-      position.y +=
-          (game.height - (perfectZoneHeight / 2)) * noteSpeedMultiplier * dt;
+      position.y += ((game.height + noteHeight) - (perfectZoneHeight / 2)) *
+          noteSpeedMultiplier *
+          dt;
 
       if (position.y >= game.height) {
         removeFromParent();
