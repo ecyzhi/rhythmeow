@@ -276,7 +276,8 @@ class Rhythm extends FlameGame
     return KeyEventResult.handled;
   }
 
-  handleInput(NoteInput input) {
+  handleInput(NoteInput? input) {
+    if (input == null) return;
     tappedInput.add(input);
 
     if (isEditing) {
@@ -294,7 +295,7 @@ class Rhythm extends FlameGame
     }
   }
 
-  handleInputEnd(NoteInput input) {
+  handleInputEnd(NoteInput? input) {
     tappedInput.remove(input);
   }
 
