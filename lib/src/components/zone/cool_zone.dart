@@ -17,6 +17,7 @@ class CoolZone extends RectangleComponent with HasGameReference<Rhythm> {
   FutureOr<void> onLoad() async {
     super.onLoad();
     size = Vector2(game.width, coolZoneHeight);
-    position = Vector2(0, game.height - perfectZoneHeight - coolZoneHeight);
+    position = Vector2(
+        0, game.height - perfectZoneHeight - missZoneHeight - coolZoneHeight);
   }
 }

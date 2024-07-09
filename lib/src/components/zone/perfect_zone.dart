@@ -1,30 +1,33 @@
 import 'dart:async';
-import 'dart:ui' as ui;
 
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
+import 'package:flame_svg/flame_svg.dart';
 import 'package:flutter/material.dart';
+import 'package:rhythmeow/src/components/components.dart';
 import 'package:rhythmeow/src/config.dart';
 import 'package:rhythmeow/src/rhythm.dart';
 
-class PerfectZone extends RectangleComponent with HasGameReference<Rhythm> {
-  PerfectZone()
-      : super(
-          // paint: Paint()..color = perfectZoneColor,
+class PerfectZone extends SvgComponent with HasGameReference<Rhythm> {
+  PerfectZone(
+    this.noteInput,
+  ) : super(
           children: [RectangleHitbox()],
         );
+
+  final NoteInput noteInput;
 
   @override
   FutureOr<void> onLoad() async {
     super.onLoad();
-    super.paint = Paint()
-      ..shader = ui.Gradient.linear(
-        Offset.zero,
-        const Offset(0, perfectZoneHeight),
-        perfectZoneGradient,
-        [0, 0.5, 1],
-      );
-    size = Vector2(game.width, perfectZoneHeight);
-    position = Vector2(0, game.height - perfectZoneHeight);
+    paint = Paint()
+      ..colorFilter = ColorFilter.mode(
+          noteColor[noteInput.index].withOpacity(0.5), BlendMode.srcIn);
+    svg = await Svg.load('images/svgs/paw.svg');
+
+    double noteWidth = game.width / 4;
+    position = Vector2(noteWidth * noteInput.index,
+        game.height - perfectZoneHeight - missZoneHeight);
+    size = Vector2(noteWidth, noteHeight);
   }
 }

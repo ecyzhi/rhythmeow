@@ -92,7 +92,10 @@ class Rhythm extends FlameGame
     WidgetsBinding.instance.addObserver(this);
 
     world.add(PlayArea());
-    world.add(PerfectZone());
+    world.add(PerfectZone(NoteInput.A));
+    world.add(PerfectZone(NoteInput.S));
+    world.add(PerfectZone(NoteInput.K));
+    world.add(PerfectZone(NoteInput.L));
     world.add(CoolZone());
 
     playState = PlayState.welcome;

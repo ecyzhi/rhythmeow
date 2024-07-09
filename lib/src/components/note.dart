@@ -45,7 +45,9 @@ class Note extends SvgComponent
         (noteWidth * noteInput.index) +
             (0.5 * noteGap) +
             (noteInput.index * noteGap),
-        isEditing ? game.height - perfectZoneHeight : -noteHeight);
+        isEditing
+            ? game.height - perfectZoneHeight - missZoneHeight
+            : -noteHeight);
     size = Vector2(noteWidth, noteHeight);
   }
 
@@ -53,7 +55,9 @@ class Note extends SvgComponent
   void update(double dt) {
     super.update(dt);
     if (isEditing) {
-      position.y -= ((game.height + noteHeight) - (perfectZoneHeight / 2)) *
+      position.y -= ((game.height + noteHeight) -
+              (perfectZoneHeight / 2) -
+              missZoneHeight) *
           noteSpeedMultiplier *
           dt;
 
@@ -61,7 +65,9 @@ class Note extends SvgComponent
         removeFromParent();
       }
     } else {
-      position.y += ((game.height + noteHeight) - (perfectZoneHeight / 2)) *
+      position.y += ((game.height + noteHeight) -
+              (perfectZoneHeight / 2) -
+              missZoneHeight) *
           noteSpeedMultiplier *
           dt;
 
