@@ -1,0 +1,1722 @@
+[
+    {
+        "timeframe": 13450,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 14920,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 16230,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 17490,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 18750,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 20030,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 21350,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 22560,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 23860,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 25190,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 26550,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 27940,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 29240,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 30630,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 31910,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 33350,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 35060,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 35660,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 36260,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 36920,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 37570,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 38190,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 38850,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 39450,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 40050,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 40690,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 41320,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 42040,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 42710,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 43300,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 43890,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 44560,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 45220,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 45850,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 46420,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 47140,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 47800,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 48410,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 49060,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 49710,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 50330,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 51000,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 51630,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 52350,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 52920,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 53900,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 54230,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 55020,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 55300,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 55580,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 55860,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 56140,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 56500,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 56870,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 57200,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 57490,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 57770,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 58020,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 58310,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 58550,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 58830,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 59150,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 59440,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 59750,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 60060,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 60390,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 60670,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 60970,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 61320,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 61630,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 61940,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 62280,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 62560,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 62910,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 63220,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 63510,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 63870,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 64100,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 64500,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 64830,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 64920,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 65670,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 65920,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 66210,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 66520,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 66950,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 67210,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 67470,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 67790,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 68420,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 68480,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 68540,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 69050,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 69610,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 70040,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 70240,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 70480,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 70740,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 70970,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 71260,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 71520,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 71850,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 72140,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 72490,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 72740,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 73020,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 73310,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 73620,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 73910,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 74200,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 74480,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 74730,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 75160,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 75290,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 75720,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 75810,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 76270,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 76500,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 76930,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 76980,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 77450,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 77510,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 77950,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 78020,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 78580,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 78630,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 79110,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 79280,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 79310,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 79590,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 79860,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 80110,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 80410,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 80640,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 80980,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 81250,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 81590,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 81880,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 82170,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 82480,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 82770,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 83020,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 83340,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 83610,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 83810,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 84180,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 84440,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 84750,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 85020,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 85340,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 85630,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 85880,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 86170,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 86370,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 86640,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 86880,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 87150,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 87380,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 87650,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 87920,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 88200,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 88460,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 88750,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 89020,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 89290,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 89570,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 89730,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 90090,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 90360,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 90680,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 90930,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 91210,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 91450,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 91710,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 91950,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 92180,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 92420,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 92860,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 93080,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 93340,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 93550,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 93770,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 94060,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 94150,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 94320,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 94660,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 94730,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 94900,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 94950,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 95150,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 95330,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 95510,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 95510,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 96250,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 96450,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 96580,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 96960,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 97160,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 97250,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 97500,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 97640,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 97820,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 98070,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 98180,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 98600,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 98750,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 98900,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 98980,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 99500,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 99690,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 99830,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 100020,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 100190,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 100410,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 100550,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 101060,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 101150,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 101460,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 101670,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 101840,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 101940,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 102110,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 102330,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 102650,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 102780,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 103330,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 103450,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 103790,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 103900,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 103990,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 104180,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 104220,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 104710,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 104800,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 104970,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 105090,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 105270,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 105660,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 105800,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 105820,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 106380,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 106500,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 106620,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 106780,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 106920,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 107050,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 107160,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 107280,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 107510,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 107670,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 107960,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 108150,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 108230,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 108520,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 108620,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 108710,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 108840,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 108930,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 109060,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 109140,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 109350,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 109480,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 109660,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 109870,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 110230,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 110370,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 110570,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 110800,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 111000,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 111090,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 111250,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 111390,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 111480,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 111660,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 111780,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 112000,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 112180,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 112380,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 112590,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 112660,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 112930,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 113050,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 113190,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 113250,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 113390,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 113570,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 113710,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 113900,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 114030,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 114140,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 114290,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 114380,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 114680,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 114910,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 115120,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 115440,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 115530,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 115650,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 115860,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 115960,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 116140,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 116320,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 116440,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 116600,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 116820,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 116890,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 117080,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 117260,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 117350,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 117510,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 117760,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 117860,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 118010,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 118520,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 118640,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 118780,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 118870,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 119410,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 119580,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 119670,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 120010,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 120100,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 120260,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 120370,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 120510,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 120670,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 120820,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 120940,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 121130,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 121260,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 121460,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 121750,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 121870,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 122010,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 122240,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 122420,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 122530,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 122670,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 122800,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 122890,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 123030,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 123290,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 123410,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 123550,
+        "input": 2,
+        "type": "hit"
+    }
+]
