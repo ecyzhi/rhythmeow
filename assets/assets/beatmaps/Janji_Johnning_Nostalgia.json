@@ -1,0 +1,87 @@
+[
+    {
+        "timeframe": 10410,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 10610,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 10860,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 11110,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 11640,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 12110,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 12490,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 12990,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 14230,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 14390,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 14590,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 14850,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 15380,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 15860,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 16070,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 16620,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 16650,
+        "input": 0,
+        "type": "hit"
+    }
+]

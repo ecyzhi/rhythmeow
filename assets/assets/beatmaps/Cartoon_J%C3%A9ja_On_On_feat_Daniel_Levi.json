@@ -1,0 +1,242 @@
+[
+    {
+        "timeframe": 2880,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 3300,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 3630,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 4120,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 4630,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 5000,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 5490,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 6010,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 6380,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 6930,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 7410,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 7730,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 8280,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 8770,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 9130,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 9660,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 10180,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 10470,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 10980,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 11490,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 11850,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 12370,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 12780,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 13200,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 13500,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 13830,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 14280,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 14440,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 14860,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 14970,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 15950,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 16310,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 16640,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 16860,
+        "input": 0,
+        "type": "hit"
+    },
+    {
+        "timeframe": 17240,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 17540,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 17900,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 18230,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 18680,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 19250,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 19690,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 20180,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 20320,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 20520,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 20660,
+        "input": 1,
+        "type": "hit"
+    },
+    {
+        "timeframe": 20800,
+        "input": 2,
+        "type": "hit"
+    },
+    {
+        "timeframe": 21250,
+        "input": 3,
+        "type": "hit"
+    },
+    {
+        "timeframe": 21570,
+        "input": 2,
+        "type": "hit"
+    }
+]

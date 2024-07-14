@@ -10,7 +10,7 @@
     {
         "name": "On & On (feat. Daniel Levi)",
         "singer": "Cartoon, Jéja",
-        "beatmap": "default.json",
+        "beatmap": "Cartoon_Jéja_On_On_feat_Daniel_Levi.json",
         "song": "Cartoon_Jéja_On_On_feat_Daniel_Levi.mp3",
         "thumbnail": null,
         "description":null
@@ -18,8 +18,16 @@
     {
         "name": "Nostalgia",
         "singer": "Janji & Johnning",
-        "beatmap": "default.json",
+        "beatmap": "Janji_Johnning_Nostalgia.json",
         "song": "Janji_Johnning_Nostalgia.mp3",
+        "thumbnail": null,
+        "description":null
+    },
+    {
+        "name": "Canon in D Major",
+        "singer": "Pachelbel",
+        "beatmap": "default.json",
+        "song": "Pachelbel_Canon_In_D_Major.mp3",
         "thumbnail": null,
         "description":null
     }
