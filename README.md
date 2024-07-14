@@ -17,3 +17,6 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Build gh-page
 peanut --web-renderer canvaskit --extra-args "--base-href=/rhythmeow/"
+
+if showing not supported Dart version, try:
+fvm flutter pub global run peanut --web-renderer canvaskit --extra-args "--base-href=/rhythmeow/"
