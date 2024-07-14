@@ -43,19 +43,21 @@ class HomeOverlayScreen extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: SingleChildScrollView(
-                physics: const ClampingScrollPhysics(),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    menuButton(
-                        context, Icons.play_arrow, 'PLAY', game.selectSong),
-                    menuButton(context, Icons.draw, 'EDITOR',
-                        () => game.selectSong(edit: true)),
-                    // menuButton(context, Icons.settings, 'SETTINGS',
-                    //     () => showSettings(context)),
-                    // menuButton(context, Icons.emoji_people, 'CREDIT', () {}),
-                  ],
+              child: Center(
+                child: SingleChildScrollView(
+                  physics: const ClampingScrollPhysics(),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      menuButton(
+                          context, Icons.play_arrow, 'PLAY', game.selectSong),
+                      // menuButton(context, Icons.draw, 'EDITOR',
+                      //     () => game.selectSong(edit: true)),
+                      // menuButton(context, Icons.settings, 'SETTINGS',
+                      //     () => showSettings(context)),
+                      // menuButton(context, Icons.emoji_people, 'CREDIT', () {}),
+                    ],
+                  ),
                 ),
               ),
             ),
