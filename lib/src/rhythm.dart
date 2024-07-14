@@ -42,6 +42,8 @@ class Rhythm extends FlameGame
   double get width => size.x;
   double get height => size.y;
 
+  double noteSpeedMultiplier = 4 / 4; // 1/4, 2/4, 4/4, 5/4, 8/4
+
   late PlayState _playState;
   PlayState get playState => _playState;
   set playState(PlayState playState) {
@@ -130,7 +132,9 @@ class Rhythm extends FlameGame
         milliTime.value += 10;
         if ((beatmap.beats?.isNotEmpty ?? false) &&
             beatmap.beats?.first.input != null &&
-            (beatmap.beats?.first.timeframe ?? 0) == milliTime.value) {
+            (beatmap.beats?.first.timeframe ?? 0) -
+                    (1000 / noteSpeedMultiplier - 1000) ==
+                milliTime.value) {
           world.add(Note(NoteInput.values[beatmap.beats!.first.input!]));
           beatmap.beats?.removeAt(0);
         }
@@ -286,7 +290,7 @@ class Rhythm extends FlameGame
     if (isEditing) {
       world.add(Note(input, isEditing: true));
       beatmap.beats?.add(Beat(
-        timeframe: milliTime.value,
+        timeframe: milliTime.value - 1000,
         input: NoteInput.values.indexOf(input),
         type: BeatType.hit.name,
       ));

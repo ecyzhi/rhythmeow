@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rhythmeow/src/config.dart';
+import 'package:rhythmeow/src/constants/timer_constant.dart';
 import 'package:rhythmeow/src/rhythm.dart';
 
 class HomeOverlayScreen extends StatelessWidget {
@@ -51,7 +52,8 @@ class HomeOverlayScreen extends StatelessWidget {
                         context, Icons.play_arrow, 'PLAY', game.selectSong),
                     menuButton(context, Icons.draw, 'EDITOR',
                         () => game.selectSong(edit: true)),
-                    // menuButton(context, Icons.settings, 'SETTINGS', () {}),
+                    // menuButton(context, Icons.settings, 'SETTINGS',
+                    //     () => showSettings(context)),
                     // menuButton(context, Icons.emoji_people, 'CREDIT', () {}),
                   ],
                 ),
@@ -86,6 +88,42 @@ class HomeOverlayScreen extends StatelessWidget {
                     .textTheme
                     .titleLarge
                     ?.copyWith(color: bodyColor),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  showSettings(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) => Center(
+        child: Container(
+          margin: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.white,
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text('SETTINGS'),
+              Material(
+                child: Slider(
+                  value: TimerConstant.noteSpeedMultiplierOption
+                      .indexOf(game.noteSpeedMultiplier)
+                      .toDouble(),
+                  min: 0,
+                  max: 4,
+                  divisions: 5,
+                  onChanged: (val) {
+                    game.noteSpeedMultiplier =
+                        TimerConstant.noteSpeedMultiplierOption[val.round()];
+                  },
+                ),
               ),
             ],
           ),

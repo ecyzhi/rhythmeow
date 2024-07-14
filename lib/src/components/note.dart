@@ -58,7 +58,7 @@ class Note extends SvgComponent
       position.y -= ((game.height + noteHeight) -
               (perfectZoneHeight / 2) -
               missZoneHeight) *
-          noteSpeedMultiplier *
+          game.noteSpeedMultiplier *
           dt;
 
       if (position.y < -noteHeight) {
@@ -68,7 +68,7 @@ class Note extends SvgComponent
       position.y += ((game.height + noteHeight) -
               (perfectZoneHeight / 2) -
               missZoneHeight) *
-          noteSpeedMultiplier *
+          game.noteSpeedMultiplier *
           dt;
 
       if (position.y >= game.height) {

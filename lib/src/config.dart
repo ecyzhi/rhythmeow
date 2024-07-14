@@ -9,7 +9,6 @@ const missZoneHeight = 30.0;
 const noteHeight = 100.0;
 const noteGap = 10.0;
 const songBuffer = 3000;
-const noteSpeedMultiplier = 1;
 
 // Color
 const Color bodyColor = Color(0xff184e77);
