@@ -22,7 +22,7 @@ class PerfectZone extends SvgComponent with HasGameReference<Rhythm> {
     super.onLoad();
     paint = Paint()
       ..colorFilter = ColorFilter.mode(
-          noteColor[noteInput.index].withOpacity(0.5), BlendMode.srcIn);
+          noteColor[noteInput.index].withValues(alpha: 0.5), BlendMode.srcIn);
     svg = await Svg.load('images/svgs/paw.svg');
 
     double noteWidth = game.width / 4;
